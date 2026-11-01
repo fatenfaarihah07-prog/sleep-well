@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laman pendidikan tentang rehat dan tidur berkualiti, manfaat tidur, gangguan tidur dan amalan tidur sihat.">
+<title>Sleep Well | Rehat Berkualiti, Hidup Lebih Sihat</title>
+<style>
+:root{--navy:#14213d;--blue:#243b67;--lav:#dcd7ff;--pale:#f4f3ff;--ink:#26324a;--muted:#66718a;--white:#fff;--mint:#dff4ed;--gold:#f6dfaa;--shadow:0 18px 45px rgba(27,43,79,.11)}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fafaff;line-height:1.7}
+a{color:#425a9b}button{font:inherit;cursor:pointer}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e9e8f4}
+.nav{max-width:1160px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:900;letter-spacing:1px;color:var(--navy);font-size:1.1rem;text-decoration:none}
+.brand span{color:#8a7bd1}
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{text-decoration:none;color:#4c5872;font-size:.88rem;font-weight:700}
+nav a:hover{color:#8375cb}
+.menu-btn{display:none;border:0;background:var(--pale);padding:8px 12px;border-radius:10px;color:var(--navy)}
+.hero{background:radial-gradient(circle at 80% 20%,#536a9d 0,#273b68 36%,#14213d 78%);color:white;overflow:hidden;position:relative}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero:before{width:320px;height:320px;right:-80px;top:-100px}
+.hero:after{width:170px;height:170px;left:8%;bottom:-100px}
+.hero-inner{max-width:1160px;margin:auto;padding:94px 22px 100px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;position:relative;z-index:1}
+.eyebrow{letter-spacing:2px;text-transform:uppercase;font-size:.76rem;font-weight:800;color:#c9c4ff}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.06;margin:15px 0 20px;letter-spacing:-2px}
+.hero p{font-size:1.1rem;max-width:590px;color:#e1e7f5}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 22px;background:#dcd7ff;color:#202c4d;font-weight:800;text-decoration:none;margin:10px 8px 0 0;box-shadow:0 8px 22px #101c3940}
+.btn.secondary{background:transparent;color:white;border:1px solid #aeb9d4;box-shadow:none}
+.moon-art{min-height:290px;display:grid;place-items:center;position:relative}
+.moon{width:205px;height:205px;border-radius:50%;background:linear-gradient(135deg,#fff9d8,#dcd7ff 70%);box-shadow:0 0 70px #dcd7ff77;position:relative}
+.moon:after{content:"";position:absolute;width:185px;height:185px;border-radius:50%;background:#30466f;left:52px;top:-16px}
+.star{position:absolute;color:#fff4c8;font-size:25px;animation:twinkle 2.4s infinite alternate}
+.star.s1{top:20px;left:15%}.star.s2{right:12%;top:35px;font-size:17px}.star.s3{bottom:30px;left:20%;font-size:15px}
+@keyframes twinkle{from{opacity:.35;transform:scale(.8)}to{opacity:1;transform:scale(1.2)}}
+section{padding:76px 22px}
+.container{max-width:1080px;margin:auto}
+.section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+.kicker{color:#8274c8;font-weight:900;text-transform:uppercase;letter-spacing:1.8px;font-size:.75rem}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;color:var(--navy);margin:10px 0}
+.section-head p,.muted{color:var(--muted)}
+.intro-grid,.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.panel{background:white;border:1px solid #ecebf5;border-radius:22px;padding:27px;box-shadow:var(--shadow)}
+.panel h3{margin-top:0;color:var(--navy)}
+.fact-band{background:var(--pale);border-radius:22px;padding:28px;display:flex;align-items:center;gap:22px}
+.fact-number{font-size:3rem;font-weight:900;color:#7869bf;white-space:nowrap}
+.pill{display:inline-block;padding:5px 11px;border-radius:99px;background:#eeecff;color:#6355a8;font-size:.78rem;font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid #ecebf5;border-radius:19px;padding:23px;box-shadow:0 9px 25px #202b4b0b;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{font-size:2rem;margin-bottom:8px}
+.card h3{color:var(--navy);margin:5px 0}
+.card p{color:var(--muted);margin-bottom:0}
+.health{background:linear-gradient(135deg,#f2f0ff,#f0faf8)}
+.health .card{min-height:205px}
+.disorder{border-top:4px solid #a69ae8}
+.tips .card{background:#fff}
+.tip-num{font-size:.75rem;font-weight:900;color:#8274c8;letter-spacing:1px}
+details{margin-top:12px;border-top:1px solid #eee;padding-top:10px}
+summary{cursor:pointer;font-weight:800;color:#6255a5}
+.note{font-size:.9rem;color:var(--muted);background:#f5f4ff;padding:15px 18px;border-radius:14px;margin-top:22px}
+.multimedia{background:#172747;color:white}
+.multimedia h2{color:white}.multimedia .section-head p{color:#d4dced}
+.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.media-box{background:#24395f;border:1px solid #40547a;border-radius:20px;padding:25px}
+.media-box h3{margin-top:0}
+.audio-controls{display:flex;gap:10px;flex-wrap:wrap}
+.audio-controls button,.quiz-btn{border:0;border-radius:999px;padding:11px 18px;background:#ded9ff;color:#26345b;font-weight:800}
+.audio-controls button.alt{background:transparent;color:white;border:1px solid #aebbd5}
+.qr-wrap{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.qr-wrap img{width:125px;height:125px;background:white;padding:7px;border-radius:12px}
+.quiz-area{max-width:760px;margin:auto;background:white;border:1px solid #ecebf5;border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+.question{font-weight:800;font-size:1.1rem;color:var(--navy);margin:0 0 15px}
+.option{display:block;width:100%;text-align:left;margin:9px 0;padding:13px 15px;border:1px solid #e4e3f0;background:#fbfaff;border-radius:12px;color:var(--ink)}
+.option:hover{border-color:#9c90dc;background:#f4f1ff}
+.option:disabled{cursor:default;opacity:1}
+.feedback{min-height:30px;font-weight:700;margin:12px 0}
+.score{font-size:1.4rem;font-weight:900;color:#6e60b4}
+.sources{background:#f3f2fc}
+.sources li{margin:12px 0}
+.sources a{overflow-wrap:anywhere}
+footer{background:#111e37;color:#dbe3f4;text-align:center;padding:30px 20px}
+footer small{color:#aab6ce}
+.backtop{position:fixed;right:18px;bottom:18px;background:#dcd7ff;color:#26345b;text-decoration:none;padding:10px 14px;border-radius:50px;font-weight:900;box-shadow:var(--shadow)}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr;padding-top:70px;text-align:center}.hero p{margin:auto}.moon-art{min-height:210px}.moon{width:155px;height:155px}.moon:after{width:140px;height:140px;left:40px}.cards{grid-template-columns:repeat(2,1fr)}.intro-grid,.two-col,.media-grid{grid-template-columns:1fr}nav{display:none;position:absolute;top:60px;left:0;right:0;background:white;padding:18px 22px;box-shadow:var(--shadow)}nav.open{display:flex;flex-direction:column}.menu-btn{display:block}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}.fact-band{display:block}.fact-number{font-size:2.5rem}.nav{padding:12px 16px}section{padding:58px 17px}.hero-inner{padding-left:18px;padding-right:18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="#utama">☾ SLEEP <span>WELL</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰ Menu</button>
+    <nav id="navLinks">
+      <a href="#pengenalan">Pengenalan</a><a href="#fakta">Fakta & manfaat</a><a href="#gangguan">Gangguan tidur</a><a href="#amalan">Amalan</a><a href="#aktiviti">Aktiviti</a><a href="#rujukan">Rujukan</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="utama">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Gaya Hidup Sihat • Rehat & Tidur</div>
+      <h1>Rehat Berkualiti,<br>Hidup Lebih Sihat.</h1>
+      <p>Tidur bukan sekadar memejamkan mata. Rehat yang mencukupi membantu tubuh pulih dan minda bersedia menghadapi hari baharu.</p>
+      <a class="btn" href="#pengenalan">Terokai sekarang ↓</a>
+      <a class="btn secondary" href="#kuiz">Cuba kuiz</a>
+    </div>
+    <div class="moon-art" aria-label="Ilustrasi bulan dan bintang">
+      <span class="star s1">✦</span><span class="star s2">✧</span><span class="star s3">✦</span><div class="moon"></div>
+    </div>
+  </div>
+</section>
+
+<section id="pengenalan">
+  <div class="container">
+    <div class="section-head"><div class="kicker">01 • Kenali tema</div><h2>Apa itu rehat dan tidur berkualiti?</h2><p>Memahami maksud tidur yang baik ialah langkah pertama untuk membina gaya hidup sihat.</p></div>
+    <div class="intro-grid">
+      <article class="panel"><span class="pill">Definisi</span><h3>Rehat</h3><p>Rehat ialah keadaan apabila seseorang mengurangkan aktiviti fizikal atau mental bagi memberi peluang kepada tubuh dan minda memulihkan tenaga. Rehat boleh dilakukan melalui aktiviti santai, berehat seketika dan tidur.</p></article>
+      <article class="panel"><span class="pill">Definisi</span><h3>Tidur berkualiti</h3><p>Tidur berkualiti ialah tidur yang mencukupi, berterusan dan menyegarkan. Seseorang biasanya berasa lebih segar apabila bangun dan dapat menjalankan aktiviti harian dengan baik.</p></article>
+    </div>
+    <div class="note">Tidur berkualiti bukan hanya bergantung pada tempoh tidur. Kekerapan terjaga pada waktu malam dan rasa letih selepas bangun juga boleh memberi petunjuk tentang kualiti tidur.</div>
+  </div>
+</section>
+
+<section id="fakta" class="health">
+  <div class="container">
+    <div class="section-head"><div class="kicker">02 • Fakta dan konsep penting</div><h2>Mengapa tidur penting?</h2><p>Semasa tidur, tubuh dan otak menjalankan proses penting yang menyokong kesihatan serta kehidupan seharian.</p></div>
+    <div class="fact-band">
+      <div class="fact-number">7–9 jam</div>
+      <div><strong>Tempoh tidur yang lazim disarankan untuk orang dewasa.</strong><br><span class="muted">Keperluan tidur berbeza mengikut umur dan individu. Remaja berumur 13–17 tahun biasanya memerlukan 8–10 jam sehari.</span></div>
+    </div>
+    <div class="two-col" style="margin-top:22px">
+      <article class="card"><div class="icon">💪</div><h3>Kesihatan fizikal</h3><p>Tidur membantu proses pemulihan tubuh, menyokong sistem pertahanan badan, kesihatan jantung dan pengawalan fungsi tubuh. Tidur yang cukup juga membantu mengekalkan tenaga untuk aktiviti harian.</p></article>
+      <article class="card"><div class="icon">🧠</div><h3>Kesihatan mental</h3><p>Tidur menyokong daya ingatan, pembelajaran, tumpuan dan pengawalan emosi. Tidur yang tidak mencukupi boleh menyebabkan seseorang mudah letih, sukar menumpukan perhatian dan lebih mudah berasa terganggu.</p></article>
+    </div>
+    <div class="note"><strong>Fakta penting:</strong> Orang dewasa berumur 18–60 tahun disarankan mendapatkan sekurang-kurangnya 7 jam tidur setiap malam. Keperluan sebenar mungkin berbeza mengikut keadaan individu.</div>
+  </div>
+</section>
+
+<section id="gangguan">
+  <div class="container">
+    <div class="section-head"><div class="kicker">03 • Isu kesihatan</div><h2>Kenali gangguan tidur</h2><p>Gangguan tidur boleh menjejaskan tempoh, kualiti atau corak tidur. Tekan setiap kad untuk membaca penerangan lanjut.</p></div>
+    <div class="cards">
+      <article class="card disorder"><div class="icon">🌙</div><h3>Insomnia</h3><p>Kesukaran untuk mula tidur, kekal tidur atau tidur semula selepas terjaga.</p><details><summary>Baca lanjut</summary><p>Insomnia boleh menyebabkan seseorang berasa letih, mudah marah dan sukar memberikan tumpuan pada waktu siang. Jika masalah berlaku berulang kali, dapatkan nasihat petugas kesihatan.</p></details></article>
+      <article class="card disorder"><div class="icon">🌬️</div><h3>Sleep Apnea</h3><p>Gangguan pernafasan ketika tidur yang menyebabkan pernafasan terhenti dan bermula semula berulang kali.</p><details><summary>Baca lanjut</summary><p>Antara tanda yang boleh berlaku ialah dengkuran kuat, tercungap-cungap ketika tidur dan rasa mengantuk pada waktu siang. Pemeriksaan kesihatan diperlukan untuk diagnosis.</p></details></article>
+      <article class="card disorder"><div class="icon">☀️</div><h3>Narcolepsy</h3><p>Gangguan yang menyebabkan rasa mengantuk melampau pada waktu siang dan serangan tidur secara tiba-tiba.</p><details><summary>Baca lanjut</summary><p>Keadaan ini boleh mengganggu aktiviti harian dan keselamatan. Penilaian oleh doktor penting untuk mengenal pasti keadaan serta rawatan yang sesuai.</p></details></article>
+      <article class="card disorder"><div class="icon">🦵</div><h3>Restless Legs Syndrome</h3><p>Keinginan kuat untuk menggerakkan kaki, biasanya disertai rasa tidak selesa ketika berehat.</p><details><summary>Baca lanjut</summary><p>Gejala lazimnya lebih ketara pada waktu petang atau malam dan boleh mengganggu seseorang daripada mula tidur.</p></details></article>
+    </div>
+    <div class="note"><strong>Perhatian:</strong> Maklumat ini untuk pendidikan dan bukan diagnosis. Jika masalah tidur berlaku secara berterusan, mengganggu aktiviti harian atau disertai kesukaran bernafas ketika tidur, dapatkan pemeriksaan doktor.</div>
+  </div>
+</section>
+
+<section id="amalan" class="health tips">
+  <div class="container">
+    <div class="section-head"><div class="kicker">04 • Langkah dan amalan</div><h2>Bina rutin tidur yang lebih baik</h2><p>Amalan kecil yang dilakukan secara konsisten boleh membantu meningkatkan kualiti tidur.</p></div>
+    <div class="cards">
+      <article class="card"><div class="tip-num">AMALAN 01</div><div class="icon">🕒</div><h3>Tetapkan jadual tidur</h3><p>Tidur dan bangun pada waktu yang hampir sama setiap hari, termasuk pada hujung minggu.</p></article>
+      <article class="card"><div class="tip-num">AMALAN 02</div><div class="icon">📵</div><h3>Kurangkan penggunaan skrin</h3><p>Hadkan penggunaan telefon, komputer dan televisyen sebelum waktu tidur.</p></article>
+      <article class="card"><div class="tip-num">AMALAN 03</div><div class="icon">☕</div><h3>Elakkan kafein pada lewat hari</h3><p>Kurangkan kopi, teh berkafein dan minuman tenaga menjelang waktu tidur.</p></article>
+      <article class="card"><div class="tip-num">AMALAN 04</div><div class="icon">🛏️</div><h3>Wujudkan suasana selesa</h3><p>Pastikan bilik tidur gelap, senyap, nyaman dan sesuai untuk berehat.</p></article>
+      <article class="card"><div class="tip-num">AMALAN 05</div><div class="icon">🚶</div><h3>Aktif pada waktu siang</h3><p>Lakukan aktiviti fizikal secara berkala pada waktu yang sesuai.</p></article>
+      <article class="card"><div class="tip-num">AMALAN 06</div><div class="icon">📖</div><h3>Lakukan aktiviti menenangkan</h3><p>Baca buku, dengar muzik yang menenangkan atau lakukan latihan pernafasan sebelum tidur.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="aktiviti" class="multimedia">
+  <div class="container">
+    <div class="section-head"><div class="kicker">05 • Multimedia</div><h2>Jom teroka dan cuba!</h2><p>Gunakan bahan dan aktiviti di bawah untuk mengukuhkan pemahaman tentang tidur berkualiti.</p></div>
+    <div class="media-grid">
+      <div class="media-box">
+        <h3>🎵 Sudut audio santai</h3>
+        <p>Dengar nada lembut yang dijana oleh laman ini. Audio ini sekadar elemen demonstrasi dan bukan rawatan gangguan tidur.</p>
+        <div class="audio-controls"><button id="audioBtn">▶ Mainkan audio</button><button class="alt" id="stopAudio">■ Hentikan</button></div>
+        <p id="audioStatus" aria-live="polite" style="font-size:.85rem;color:#d4dced">Audio belum dimainkan.</p>
+      </div>
+      <div class="media-box">
+        <h3>📺 Bahan bacaan dan tontonan</h3>
+        <p>Terokai maklumat lanjut daripada Pusat Kawalan dan Pencegahan Penyakit (CDC) tentang tidur, tempoh tidur dan tanda gangguan tidur.</p>
+        <a class="btn" href="https://www.cdc.gov/sleep/about/index.html" target="_blank" rel="noopener">Buka panduan CDC ↗</a>
+      </div>
+      <div class="media-box">
+        <h3>✨ Infografik ringkas</h3>
+        <p><strong>3 perkara untuk diingati:</strong></p>
+        <p>① Cukupkan tempoh tidur mengikut umur.<br>② Kekalkan jadual tidur yang teratur.<br>③ Dapatkan bantuan jika masalah tidur berlarutan.</p>
+      </div>
+      <div class="media-box">
+        <h3>🔳 Kod QR laman web</h3>
+        <p>Selepas laman web diterbitkan, kod QR ini akan memaparkan pautan laman web korang supaya mudah diakses melalui telefon.</p>
+        <div class="qr-wrap"><img id="qrImage" alt="Kod QR pautan laman web" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fexample.com"><span id="qrHint" style="font-size:.9rem;color:#d4dced">Kod QR contoh. Gantikan pautan selepas laman web diterbitkan.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kuiz">
+  <div class="container">
+    <div class="section-head"><div class="kicker">06 • Uji pengetahuan</div><h2>Mini kuiz tidur berkualiti</h2><p>Jawab lima soalan berikut dan lihat markah yang diperoleh.</p></div>
+    <div class="quiz-area">
+      <div id="quiz">
+        <p class="muted" id="progress">Soalan 1 daripada 5</p>
+        <p class="question" id="questionText">Berapakah tempoh tidur yang disarankan untuk kebanyakan orang dewasa?</p>
+        <div id="options"></div>
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+        <button class="quiz-btn" id="nextBtn" style="display:none">Soalan seterusnya →</button>
+      </div>
+      <div id="result" style="display:none;text-align:center"><div class="score" id="scoreText"></div><p id="scoreMessage"></p><button class="quiz-btn" id="restartBtn">Cuba sekali lagi</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="rujukan" class="sources">
+  <div class="container">
+    <div class="section-head"><div class="kicker">07 • Sumber maklumat</div><h2>Rujukan</h2><p>Maklumat laman ini diringkaskan daripada sumber kesihatan berautoriti.</p></div>
+    <div class="panel">
+      <ol>
+        <li>Centers for Disease Control and Prevention (CDC). <em>About Sleep</em>. <a href="https://www.cdc.gov/sleep/about/index.html" target="_blank" rel="noopener">https://www.cdc.gov/sleep/about/index.html</a></li>
+        <li>National Heart, Lung, and Blood Institute (NHLBI), National Institutes of Health. <em>Healthy Sleep Habits / Insomnia Treatment</em>. <a href="https://www.nhlbi.nih.gov/health/insomnia/treatment" target="_blank" rel="noopener">https://www.nhlbi.nih.gov/health/insomnia/treatment</a></li>
+        <li>National Institutes of Health (NIH). <em>Healthy Sleep</em>. <a href="https://health.nih.gov/health-topics-a-z/healthy-sleep" target="_blank" rel="noopener">https://health.nih.gov/health-topics-a-z/healthy-sleep</a></li>
+        <li>Centers for Disease Control and Prevention (CDC). <em>About Sleep and Your Heart Health</em>. <a href="https://www.cdc.gov/heart-disease/about/sleep-and-heart-health.html" target="_blank" rel="noopener">https://www.cdc.gov/heart-disease/about/sleep-and-heart-health.html</a></li>
+      </ol>
+      <p class="muted" style="font-size:.9rem">Tarikh capaian: 1 November 2026. Sila semak semula pautan dan tarikh kemas kini sumber sebelum penghantaran tugasan.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><strong>☾ SLEEP WELL</strong><br>Rehat Berkualiti, Hidup Lebih Sihat.<br><small>Laman pendidikan kesihatan • Dibina untuk tujuan pembelajaran</small></footer>
+<a class="backtop" href="#utama" aria-label="Kembali ke atas">↑ Atas</a>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+// Audio lembut dijana terus oleh pelayar; tiada fail audio luar diperlukan.
+let audioContext=null, oscillators=[];
+function stopTone(){
+  oscillators.forEach(o=>{try{o.stop()}catch(e){}});
+  oscillators=[];
+  if(audioContext){audioContext.close();audioContext=null;}
+  document.getElementById('audioStatus').textContent='Audio telah dihentikan.';
+}
+document.getElementById('audioBtn').addEventListener('click',()=>{
+  stopTone();
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC){document.getElementById('audioStatus').textContent='Pelayar ini tidak menyokong audio tersebut.';return;}
+  audioContext=new AC();
+  [261.63,329.63,392].forEach((freq,i)=>{
+    const osc=audioContext.createOscillator(),gain=audioContext.createGain();
+    osc.type='sine';osc.frequency.value=freq;gain.gain.value=.018/(i+1);
+    osc.connect(gain);gain.connect(audioContext.destination);osc.start();oscillators.push(osc);
+  });
+  document.getElementById('audioStatus').textContent='Audio lembut sedang dimainkan. Tekan Hentikan untuk menamatkannya.';
+});
+document.getElementById('stopAudio').addEventListener('click',stopTone);
+
+// Kuiz interaktif
+const questions=[
+ {q:'Berapakah tempoh tidur yang disarankan untuk kebanyakan orang dewasa berumur 18 hingga 60 tahun?',o:['3 hingga 4 jam','5 hingga 6 jam','Sekurang-kurangnya 7 jam','12 hingga 14 jam'],a:2,why:'Betul! Orang dewasa berumur 18–60 tahun disarankan tidur sekurang-kurangnya 7 jam setiap malam.'},
+ {q:'Antara berikut, yang manakah amalan tidur yang baik?',o:['Tidur pada waktu yang berbeza setiap malam','Mengekalkan jadual tidur yang tetap','Minum kopi sebelum tidur','Bermain telefon sehingga tertidur'],a:1,why:'Jadual tidur yang tetap membantu mengekalkan rutin tidur.'},
+ {q:'Gangguan yang melibatkan pernafasan terhenti dan bermula semula ketika tidur dikenali sebagai…',o:['Insomnia','Narcolepsy','Sleep Apnea','Restless Legs Syndrome'],a:2,why:'Sleep Apnea melibatkan gangguan pernafasan berulang ketika tidur.'},
+ {q:'Yang manakah boleh menjadi tanda kualiti tidur yang kurang baik?',o:['Bangun dengan rasa segar','Mudah memberikan tumpuan','Kerap terjaga pada waktu malam','Berasa bertenaga sepanjang hari'],a:2,why:'Kerap terjaga pada waktu malam boleh menjadi tanda tidur yang kurang berkualiti.'},
+ {q:'Apakah tindakan yang sesuai jika masalah tidur berlaku secara berterusan?',o:['Abaikan sahaja','Ambil ubat orang lain','Dapatkan nasihat petugas kesihatan','Kurangkan waktu tidur'],a:2,why:'Petugas kesihatan boleh membantu menilai masalah tidur dan mencadangkan langkah yang sesuai.'}
+];
+let current=0,score=0,answered=false;
+const qText=document.getElementById('questionText'),opts=document.getElementById('options'),feed=document.getElementById('feedback'),next=document.getElementById('nextBtn');
+function showQuestion(){
+ answered=false;feed.textContent='';next.style.display='none';
+ document.getElementById('progress').textContent=`Soalan ${current+1} daripada ${questions.length}`;
+ qText.textContent=questions[current].q;opts.innerHTML='';
+ questions[current].o.forEach((label,i)=>{
+  const b=document.createElement('button');b.className='option';b.textContent=String.fromCharCode(65+i)+'. '+label;
+  b.addEventListener('click',()=>choose(i));opts.appendChild(b);
+ });
+}
+function choose(i){
+ if(answered)return;answered=true;const item=questions[current];
+ [...opts.children].forEach((b,index)=>{b.disabled=true;if(index===item.a)b.style.borderColor='#48a889';if(index===i&&i!==item.a)b.style.borderColor='#d47777';});
+ if(i===item.a){score++;feed.textContent='✓ Tepat! '+item.why;feed.style.color='#27785e';}
+ else{feed.textContent='Belum tepat. '+item.why;feed.style.color='#a34c55';}
+ next.style.display='inline-block';next.textContent=current===questions.length-1?'Lihat markah':'Soalan seterusnya →';
+}
+next.addEventListener('click',()=>{
+ current++;
+ if(current<questions.length)showQuestion();
+ else{
+  document.getElementById('quiz').style.display='none';document.getElementById('result').style.display='block';
+  document.getElementById('scoreText').textContent=`Markah anda: ${score} / ${questions.length}`;
+  document.getElementById('scoreMessage').textContent=score===5?'Tahniah! Pengetahuan anda sangat baik.':score>=3?'Bagus! Teruskan membaca untuk menambah pengetahuan.':'Jangan berputus asa. Baca semula maklumat dan cuba sekali lagi.';
+ }
+});
+document.getElementById('restartBtn').addEventListener('click',()=>{
+ current=0;score=0;document.getElementById('result').style.display='none';document.getElementById('quiz').style.display='block';showQuestion();
+});
+showQuestion();
+
+// Apabila diterbitkan, kod QR akan dijana daripada alamat laman web sebenar.
+if(location.protocol.startsWith('http') && !location.hostname.includes('example')){
+ const qr=document.getElementById('qrImage');
+ qr.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+encodeURIComponent(location.href);
+ document.getElementById('qrHint').textContent='Imbas kod ini untuk membuka laman web.';
+}
+</script>
+</body>
+</html>
